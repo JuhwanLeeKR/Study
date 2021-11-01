@@ -5,13 +5,12 @@
 
 // 2. Variable, rw(read/write)
 // let (added in ES6)
-let globalName = 'global name';
-{
-  let name = 'ellie';
-  console.log(name);
-  name = 'hello';
-  console.log(name);
-  console.log(globalName);
+let globalName = 'global name'; {
+    let name = 'ellie';
+    console.log(name);
+    name = 'hello';
+    console.log(name);
+    console.log(globalName);
 }
 console.log(name);
 console.log(globalName);
@@ -20,8 +19,8 @@ console.log(globalName);
 // var hoisting (move declaration from bottom to top)
 // has no block scope
 {
-  age = 4;
-  var age;
+    age = 4;
+    var age;
 }
 console.log(age);
 
@@ -32,7 +31,7 @@ const daysInWeek = 7;
 const maxNumber = 5;
 
 // Note!
-// Immutable data types: premitive types, frozen objects (i.e. object.freeze())
+// Immutable data types: primitive types, frozen objects (i.e. object.freeze())
 // Mutable data types: all objects by default are mutable in JS
 // favor immutable data type always for a few reasons:
 //  - security
@@ -59,7 +58,7 @@ console.log(negativeInfinity);
 console.log(nAn);
 
 // bigInt (fairly new, don't use it yet)
-const bigInt = 1234567890123456789012345678901234567890n; // over (-2**53) ~ 2*53)
+const bigInt = 1234567890123456789012345678901234567890; // over (-2**53) ~ 2*53) 1234567890123456789012345678901234567890n이라고 저장이 안됨.
 console.log(`value: ${bigInt}, type: ${typeof bigInt}`);
 
 // string

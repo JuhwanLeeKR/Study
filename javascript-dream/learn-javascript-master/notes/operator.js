@@ -7,7 +7,7 @@ console.log(`string literals: 1 + 2 = ${1 + 2}`);
 console.log(1 + 1); // add
 console.log(1 - 1); // substract
 console.log(1 / 1); // divide
-console.log(1 * 1); // multiply
+console.log(1 * 1); // multiply 
 console.log(5 % 2); // remainder
 console.log(2 ** 3); // exponentiation
 
@@ -54,11 +54,11 @@ console.log(`and: ${value1 && value2 && check()}`);
 // nullableObject && nullableObject.something
 
 function check() {
-  for (let i = 0; i < 10; i++) {
-    //wasting time
-    console.log('😱');
-  }
-  return true;
+    for (let i = 0; i < 10; i++) {
+        //wasting time
+        console.log('😱');
+    }
+    return true;
 }
 
 // ! (not)
@@ -96,11 +96,11 @@ console.log(null === undefined);
 // if, else if, else
 const name = 'df';
 if (name === 'ellie') {
-  console.log('Welcome, Ellie!');
+    console.log('Welcome, Ellie!');
 } else if (name === 'coder') {
-  console.log('You are amazing coder');
+    console.log('You are amazing coder');
 } else {
-  console.log('unkwnon');
+    console.log('unkwnon');
 }
 
 // 9. Ternary operator: ?
@@ -113,16 +113,16 @@ console.log(name === 'ellie' ? 'yes' : 'no');
 // use for multiple type checks in TS
 const browser = 'IE';
 switch (browser) {
-  case 'IE':
-    console.log('go away!');
-    break;
-  case 'Chrome':
-  case 'Firefox':
-    console.log('love you!');
-    break;
-  default:
-    console.log('same all!');
-    break;
+    case 'IE':
+        console.log('go away!');
+        break;
+    case 'Chrome':
+    case 'Firefox':
+        console.log('love you!');
+        break;
+    default:
+        console.log('same all!');
+        break;
 }
 
 // 11. Loops
@@ -130,47 +130,48 @@ switch (browser) {
 // body code is executed.
 let i = 3;
 while (i > 0) {
-  console.log(`while: ${i}`);
-  i--;
+    console.log(`while: ${i}`);
+    i--;
 }
 
 // do while loop, body code is executed first,
 // then check the condition.
 do {
-  console.log(`do while: ${i}`);
-  i--;
+    console.log(`do while: ${i}`);
+    i--;
 } while (i > 0);
 
 // for loop, for(begin; condition; step)
 for (i = 3; i > 0; i--) {
-  console.log(`for: ${i}`);
+    console.log(`for: ${i}`);
 }
 
 for (let i = 3; i > 0; i = i - 2) {
-  // inline variable declaration
-  console.log(`inline variable for: ${i}`);
+    // inline variable declaration
+    console.log(`inline variable for: ${i}`);
 }
 
 // nested loops
 for (let i = 0; i < 10; i++) {
-  for (let j = 0; j < 10; j++) {
-    console.log(`i: ${i}, j:${j}`);
-  }
+    for (let j = 0; j < 10; j++) {
+        console.log(`i: ${i}, j:${j}`);
+    }
 }
+
 
 // break, continue
 // Q1. iterate from 0 to 10 and print only even numbers (use continue)
 for (let i = 0; i < 11; i++) {
-  if (i % 2 === 0) {
-    continue;
-  }
-  console.log(`q1. ${i}`);
+    if (i % 2 === 0) {
+        continue;
+    }
+    console.log(`q1. ${i}`);
 }
 
 // Q2. iterate from 0 to 10 and print numbers until reaching 8 (use break)
 for (let i = 0; i < 11; i++) {
-  if (i > 8) {
-    break;
-  }
-  console.log(`q2. ${i}`);
+    if (i > 8) {
+        break;
+    }
+    console.log(`q2. ${i}`);
 }
