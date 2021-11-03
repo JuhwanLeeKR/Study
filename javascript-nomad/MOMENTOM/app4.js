@@ -6,14 +6,15 @@ const HIDDEN_CLASSNAME = "hidden"; //일반적으로 String만 포함된 변수�
 const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
-    event.preventDefault(); // 어떤 event의 기본 행동이든지 발생되지 않도록 막는다.
-    loginForm.classList.add(HIDDEN_CLASSNAME);
-    const username = loginInput.value;
-    localStorage.setItem(USERNAME_KEY, username);
-    paintGreetings(username);
+    event.preventDefault(); // 어떤 event의 기본 행동이든지 발생되지 않도록 막는다. Step1. event가 원래 하려는 행동을 멈춰준다. (브라우저의 새로고침)
+    loginForm.classList.add(HIDDEN_CLASSNAME); // Step2. form을 숨겨준다.
+    const username = loginInput.value; // Step3. loginInput.value를 username이라는 변수로 저장해준다.
+    localStorage.setItem(USERNAME_KEY, username); // Step4. username 값을 username이라는 key와 함께 local storage에 저장한다.
+    paintGreetings(); // Step5. paintGreetings 함수를 호출한다.
 }
 
-function paintGreetings(username) {
+function paintGreetings() {
+    const username = localStorage.getItem(USERNAME_KEY);
     greeting.innerText = `Hello ${username}!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
@@ -28,5 +29,5 @@ if (savedUsername === null) {
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     // show the greetings
-    paintGreetings(savedUsername);
+    paintGreetings();
 }
