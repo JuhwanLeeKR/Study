@@ -25,6 +25,6 @@ if (isNaN(age) || age < 0) {
 }
 
 // complicated conditional
-if ((a && b) || (c && d) || (x || w)) {
-    // x || w 확인 -> c && d -> a && b
-}
+// if ((a && b) || (c && d) || (x || w)) {
+//     // x || w 확인 -> c && d -> a && b
+// }
