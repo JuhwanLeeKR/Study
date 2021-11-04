@@ -9,8 +9,9 @@ let toDos = []; // const로 선언하면 재할당이 되지 않기 때문에 le
 
 function deleteTodo(event) {
     const li = event.target.parentElement;
-    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
 }
 
 function paintToDo(newTodo) {
