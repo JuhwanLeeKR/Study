@@ -9,13 +9,15 @@ let toDos = []; // const로 선언하면 재할당이 되지 않기 때문에 le
 
 function deleteTodo(event) {
     const li = event.target.parentElement;
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
     li.remove();
 }
 
 function paintToDo(newTodo) {
     const li = document.createElement("li");
+    li.id = newTodo.id;
     const span = document.createElement("span");
-    span.innerText = newTodo;
+    span.innerText = newTodo.text;
     const button = document.createElement("button");
     button.innerText = "❌";
     button.addEventListener("click", deleteTodo);
@@ -32,8 +34,12 @@ function handleToDoSubmit(event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newTodo);
-    paintToDo(newTodo);
+    const newTodoObj = {
+        text: newTodo,
+        id: Date.now(),
+    }
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
     saveToDos();
 }
 
@@ -53,3 +59,9 @@ if (savedToDos !== null) {
 // function sayHello(item) {
 //     console.log("this is the turn of ", item)
 // }
+
+function sexyFilter() {
+
+}
+
+[1, 2, 3, 4].filter(sexyFilter)
