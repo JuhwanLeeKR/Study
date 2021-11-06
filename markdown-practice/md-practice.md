@@ -100,7 +100,7 @@ ___
 ![고양이애옹](https://cdn.pixabay.com/photo/2019/03/13/08/29/cat-4052454_1280.jpg)
 
 [![이미지 설명](이미지 링크)](연결하고자하는 url "마우스 오버 시 나타낼 링크 title")
-[![고양이애옹](https://cdn.pixabay.com/photo/2019/03/13/08/29/cat-4052454_1280.jpg)](https://cdn.pixabay.com/photo/2019/03/13/08/29/cat-4052454_1280.jpg"이미지 무료 사이트 pixabay")
+[![고양이애옹](https://cdn.pixabay.com/photo/2019/03/13/08/29/cat-4052454_1280.jpg)(https://cdn.pixabay.com/photo/2019/03/13/08/29/cat-4052454_1280.jpg"이미지 무료 사이트 pixabay")
 
 # 10. 테이블
 | 드라마 제목 | 주연 배우 | 방영일 |
@@ -119,8 +119,12 @@ ___
 ttps://kr.piliapp.com/twitter-symbols/
 
 # 13. 글자 색상
+
 <span style="color:red">red</span>
+
 <span style="color:#d3d3d3">#d3d3d3</span>
+
 <span style="color:rgb(245, 235, 13)">rgb(245, 235, 13)</span>
+
 <br/><br/><br/><br/><br/><br/>
 [출처](https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95)
