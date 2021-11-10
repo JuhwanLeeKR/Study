@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8492a6;
+  text-decoration: none;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+body {
+  background-color: #e5e5e5;
+}
+
+ul {
+  background-color: #fff;
+  width: 540px;
+  padding: 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #e5eaef;
+}
+
+ul::after {
+  content: '';
+  clear: left;
+  display: block;
+}
+
+li {
+  list-style: none;
+  background-color: #fff;
+  float: left;
+  margin-right: 16px;
+  padding: 16px 20px;
+}
+
+li:nth-child(2) {
+  border-bottom: 2px solid #2860e1;
+}
+li > a {
+  font-weight: 400;
+}
+li:nth-child(2) > a {
+  color: #2860e1;
+  font-weight: 500;
+}
+/* 
+ * html은 건들면 안되는 줄 알고 마크업을 했다.
+ * li가 아닌 a tag에 padding을 줘야 사용성이 좋다.
+ */
+
+/* ▼ KIMBUG'S CODE */
+/* 
+.tab-menu {
+  padding-left: 0;
+  border-bottom: 1px solid #e5eaef;
+  list-style-type: none;
+}
+
+.tab-menu::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tab-menu-item {
+  float: left;
+  margin-right: 16px;
+}
+
+.tab-menu-item.active {
+  border-bottom: 2px solid #2860e1;
+}
+
+.tab-menu-item.active a {
+  font-weight: 500;
+  color: #2860e1;
+}
+
+.tab-menu-item:last-child {
+  margin-right: 0;
+}
+
+.tab-menu-item a {
+  display: block;
+  padding: 16px 20px;
+} */
