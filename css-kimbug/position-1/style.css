@@ -56,23 +56,6 @@ h1 {
  * class를 준 span을 사용하지 않았다.
 */
 /* ▼ KIMBUG's CODE */
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-}
-
-h1 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #273444;
-}
-
-/* ▼ WHERE YOUR CODE BEGINS */
 
 /* .user-card {
   max-width: 240px;
