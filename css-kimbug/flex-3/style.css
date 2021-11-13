@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: #273444;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+
+.profile-location {
+  font-size: 14px;
+  line-height: 1.4285714286;
+  color: #8492a6;
+}
+
+.profile-detail dt {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6666666667;
+  color: #8492a6;
+}
+
+.profile-detail dd {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.25;
+  color: #0066ff;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+body {
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile {
+  width: 386px;
+  background-color: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 40px;
+}
+.profile-image {
+  display: block; /* 오류가 안 생기게 block으로 준다 */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.profile-name {
+  margin-bottom: 4px;
+}
+.profile-location {
+  margin-bottom: 32px;
+}
+.profile-detail {
+  width: 100%; /* flex 정렬이 안 먹을때, width를 100% 주자 */
+  display: flex;
+  justify-content: space-between;
+}
+.profile-detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
