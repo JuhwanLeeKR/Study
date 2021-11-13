@@ -33,22 +33,10 @@ p {
   background-color: #fff;
 }
 
-.card::after {
-  content: '';
-  display: block;
-  clear: left;
-}
-
 .card-user {
-  float: left;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  margin-right: 20px;
-}
-
-.card-content {
-  float: left;
 }
 
 .card-content h1 {
@@ -61,3 +49,9 @@ p {
 }
 
 /* ▼ WHERE YOUR CODE BEGINS */
+.card {
+  width: 531px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}

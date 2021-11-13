@@ -21,14 +21,7 @@ a {
   list-style-type: none;
 }
 
-.tab-menu::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 .tab-menu-item {
-  float: left;
   margin-right: 16px;
 }
 
@@ -51,3 +44,11 @@ a {
 }
 
 /* ▼ WHERE YOUR CODE BEGINS */
+
+.tab-menu {
+  display: flex;
+  /* flex-direction: row; 기본값 */
+  /* flex-wrap: nowrap; 기본값 */
+  /* justify-content: flex-start; 기본값 */
+  align-items: center;
+}
