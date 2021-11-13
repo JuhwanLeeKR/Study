@@ -1,0 +1,248 @@
+.like-button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+.sr-only {
+  /* display: none;으로 저리하면 scree reader가 읽지 않는다. */
+  position: absolute;
+  z-index: -100;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+.card {
+  background-color: #fff;
+  padding: 24px;
+  display: flex;
+  width: 840px;
+}
+.card-image {
+  width: 300px;
+  height: 200px;
+  background-image: url(./assets/img-house.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 12px;
+  border-radius: 6px;
+  margin-right: 24px;
+}
+.like-button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-image: url(./assets/icon-favorite.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.card-content {
+  flex-grow: 1; /* 남은 공간 처리 */
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+.property-type {
+  margin-bottom: 8px;
+}
+.plus-badge {
+  background-color: #92174d;
+  padding: 1px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+.property-rate::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(./assets/icon-star.svg);
+  background-size: contain;
+  position: relative;
+  top: 2px;
+}
+.card-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+/* 추가 내용 */
+.property-detail dd span::after {
+  content: '·';
+  margin: 0 8px;
+}
+.property-detail dd span:last-child::after {
+  content: '';
+  margin: 0;
+}
+.property-detail div:first-child {
+  margin-bottom: 8px;
+}
+
+/* 
+ * 1. line-height 확인! detail 이다.
+ */
+
+/* ▼ KIMBUG's CODE*/
+/* 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  border: none;
+}
+
+.sr-only {
+  position: absolute;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.card {
+  display: flex;
+  width: 840px;
+  padding: 24px;
+  background-color: #fff;
+}
+
+.card-image {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 6px;
+  margin-right: 24px;
+  background-image: url(./assets/img-house.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-button {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url(./assets/icon-favorite.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.plus-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 14px;
+  line-height: 1.4285714286;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #92174d;
+}
+
+.property-type span {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #7d858f;
+}
+
+.property-rate {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.property-rate::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(./assets/icon-star.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.property-rate {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #7d858f;
+}
+
+.property-rate strong {
+  margin-right: 2px;
+  font-weight: 400;
+  color: #151b26;
+}
+
+.card-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #151b26;
+}
+
+.property-detail {
+  font-size: 14px;
+  line-height: 1.1428571429;
+  color: #7d858f;
+}
+
+.property-detail div:first-child {
+  margin-bottom: 8px;
+}
+
+.property-detail dd span::after {
+  content: "·";
+  margin: 0 6px;
+}
+
+.property-detail dd span:last-child::after {
+  content: "";
+  margin: 0;
+}
+*/

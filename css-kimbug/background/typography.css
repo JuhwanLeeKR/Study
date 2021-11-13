@@ -1,0 +1,19 @@
+.fw-regular {
+  font-weight: 400;
+}
+.fw-medium {
+  font-weight: 500;
+}
+
+.text-primary {
+  color: #151b26;
+}
+.text-secondary {
+  color: #7d858f;
+}
+.text-white {
+  color: #fff;
+}
+.text-plus {
+  color: #92174d;
+}
