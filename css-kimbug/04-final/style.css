@@ -223,7 +223,17 @@ p {
   color: #3040c4;
   text-decoration: underline;
 }
-
+/* Footer */
+.footer {
+  padding: 24px 0;
+}
+.footer .col-12 {
+  font-size: 14px;
+  line-height: 1.714285714285714;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+  color: #807f81;
+}
 /* >= 768px (Dexktop) */
 @media screen and (min-width: 768px) {
   /* Reset CSS */
