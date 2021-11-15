@@ -69,9 +69,7 @@ p {
   display: flex;
   justify-content: center;
 }
-.button-wrapper > .fill-button:first-child {
-  margin-right: 8px;
-}
+
 .fill-button {
   display: inline-flex;
   justify-content: center;
@@ -86,9 +84,26 @@ p {
   background-color: #3040c4;
   color: #fff;
 }
+.button-wrapper > .fill-button:first-child {
+  margin-right: 8px;
+}
 .fill-button.inverted {
   color: #3040c4;
   background-color: #fff;
+}
+/* Service */
+.service {
+  background-color: #f4f5f7;
+  padding: 80px 0;
+}
+.service-title {
+  font-size: 22px;
+  line-height: 1.363636363636364;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+.service .col-12:first-of-type {
+  margin-bottom: 40px;
 }
 
 /* >= 768px (Dexktop) */
@@ -118,6 +133,24 @@ p {
     height: 56px;
     font-size: 18px;
     line-height: 1.555555555555556;
+    margin-right: 16px;
+  }
+  .button-wrapper > .fill-button:first-child {
+    margin-right: 16px;
+  }
+  /* Service */
+  .service {
+    background-color: #f4f5f7;
+    padding: 80px 0;
+  }
+  .service-title {
+    font-size: 26px;
+    line-height: 1.307692307692308;
+    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+  }
+  .service .col-12:first-of-type {
+    margin-bottom: 0;
   }
 }
 
