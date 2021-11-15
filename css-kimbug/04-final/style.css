@@ -181,6 +181,49 @@ p {
   margin-bottom: 40px;
 }
 
+/* Subscription */
+.subscription {
+  text-align: center;
+  background-color: #f2f8fa;
+  padding: 40px 0;
+}
+.subscription-img {
+  width: 100%;
+  max-width: 290px;
+  margin-bottom: 16px;
+  padding: 25px 49px;
+}
+.subscription-title {
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 16px;
+}
+.subsription-desc {
+  margin-bottom: 24px;
+}
+.subsription-desc + form input {
+  width: 290px;
+  padding: 12px 16px;
+  border: none;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+.formbtn.fill-button {
+  width: 290px;
+  margin-bottom: 8px;
+}
+.subsription-desc + form + p {
+  font-size: 13px;
+  line-height: 1.538461538461538;
+  color: #7b7b7e;
+}
+.subsription-desc + form + p a {
+  color: #3040c4;
+  text-decoration: underline;
+}
+
 /* >= 768px (Dexktop) */
 @media screen and (min-width: 768px) {
   /* Reset CSS */
@@ -264,6 +307,33 @@ p {
   .section__curriculum .row:nth-of-type(2) .section-desc {
     font-size: 18px;
     line-height: 1.444444444444444;
+  }
+  /* Subscription */
+  .subscription {
+    text-align: left;
+    padding: 80px 0;
+  }
+  .subscription-img {
+    padding: 8px 83px 7px 0;
+    margin: 0;
+    max-width: 370px;
+  }
+  .col-md-7 {
+    margin: 32px 0;
+  }
+  .subscription-title {
+    font-size: 40px;
+  }
+  .subsription-desc + form {
+    display: flex;
+    margin-bottom: 4px;
+  }
+  .subsription-desc + form input {
+    width: 362px;
+    margin-right: 4px;
+  }
+  .formbtn.fill-button {
+    width: 160px;
   }
 }
 
