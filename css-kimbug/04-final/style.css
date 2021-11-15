@@ -83,7 +83,12 @@ p {
   border-radius: 2px;
   background-color: #3040c4;
   color: #fff;
+  transition: opacity 200ms ease-in-out;
 }
+.fill-button:hover {
+  opacity: 0.7;
+}
+
 .button-wrapper > .fill-button:first-child {
   margin-right: 8px;
 }
@@ -105,7 +110,7 @@ p {
 .service .col-12:first-of-type {
   margin-bottom: 40px;
 }
-/* Section */
+/* Section-program */
 .section {
   padding: 80px 0;
 }
@@ -155,6 +160,27 @@ p {
   padding-bottom: 32px;
 }
 
+/* Section-curriculum */
+.section__curriculum .section-subtitle {
+  color: #0189d1;
+}
+.section__curriculum--img {
+  display: none;
+  width: 100%;
+  max-width: 450px;
+  min-width: 450px;
+  margin-bottom: 24px;
+}
+.section__curriculum .row:first-of-type .section-desc {
+  margin-bottom: 32px;
+}
+.section__curriculum .fill-button {
+  margin-bottom: 48px;
+}
+.section__curriculum .row:nth-of-type(2) .col-12:first-child {
+  margin-bottom: 40px;
+}
+
 /* >= 768px (Dexktop) */
 @media screen and (min-width: 768px) {
   /* Reset CSS */
@@ -201,8 +227,11 @@ p {
   .service .col-12:first-of-type {
     margin-bottom: 0;
   }
-  /* Section */
+  /* Section-program */
   .section {
+    padding-bottom: 96px;
+  }
+  .section__program {
     text-align: center;
   }
   .section-subtitle {
@@ -225,8 +254,16 @@ p {
     font-size: 20px;
     line-height: 1.2;
   }
-  .section {
-    padding-bottom: 96px;
+
+  .section__curriculum--img {
+    display: inline-block;
+  }
+  .section__curriculum .row:first-of-type .section-desc {
+    margin-bottom: 72px;
+  }
+  .section__curriculum .row:nth-of-type(2) .section-desc {
+    font-size: 18px;
+    line-height: 1.444444444444444;
   }
 }
 
