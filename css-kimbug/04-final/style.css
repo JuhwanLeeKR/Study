@@ -213,6 +213,7 @@ p {
 .formbtn.fill-button {
   width: 290px;
   margin-bottom: 8px;
+  border: none;
 }
 .subsription-desc + form + p {
   font-size: 13px;
@@ -353,3 +354,12 @@ p {
     max-width: 960px !important;
   }
 }
+
+/********* Note ***** 
+ * 1. 강조를 해줄 때는, 확실히 strong tag를 사용하자
+ * 2. figma를 사용할 때, code 탭을 누르면 code를 따올 수 있다.
+ *   (ex. box-shadow)
+ * 3. form 안에 input, button요소를 div로 감쌀 수 있다.
+ * 4. 가독성이 좋게 class를 잘 설정해주자.
+ * 5. footer에는 ul > li를 써주는게 좋다.
+ */
