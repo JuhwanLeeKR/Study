@@ -1,7 +1,7 @@
 'use strict';
 
 // JavaScript is synchronous.
-// Execute the code block by orger after hoisting.
+// Execute the code block in order after hoisting.
 // hoisting: var, function declaration
 console.log('1');
 setTimeout(() => console.log('2'), 1000);
@@ -51,20 +51,20 @@ const password = prompt('enter your passrod');
 userStorage.loginUser(
   id,
   password,
-  user => {
+  (user) => {
     userStorage.getRoles(
       user,
-      userWithRole => {
+      (userWithRole) => {
         alert(
           `Hello ${userWithRole.name}, you have a ${userWithRole.role} role`
         );
       },
-      error => {
+      (error) => {
         console.log(error);
       }
     );
   },
-  error => {
+  (error) => {
     console.log(error);
   }
 );
