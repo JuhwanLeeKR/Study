@@ -92,3 +92,27 @@
 
   surprise(divide);
 }
+/* *************************
+ * 자바스크립트 기초 3. 연산자
+ * | boolean의 모든 것 && 연산자
+ **************************** */
+{
+  console.clear();
+  // false: 0, -0, '', null, undefined
+  // true: -1, 'hello', [], 'false'
+  let num = 9; // undefined
+  if (num) {
+    console.log('true!');
+  }
+
+  num && console.log(num);
+
+  let obj = {
+    name: 'ellie',
+  };
+  if (obj) {
+    console.log(obj.name);
+  }
+
+  obj && console.log(obj.name);
+}
