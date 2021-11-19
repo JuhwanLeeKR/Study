@@ -92,6 +92,7 @@
 
   surprise(divide);
 }
+
 /* *************************
  * 자바스크립트 기초 3. 연산자
  * | boolean의 모든 것 && 연산자
@@ -115,4 +116,38 @@
   }
 
   obj && console.log(obj.name);
+}
+
+/* *************************
+ * 자바스크립트 기초 4. 클래스
+ * | 클래스 예제와 콜백 함수 최종 정리
+ **************************** */
+{
+  console.clear();
+  class Counter {
+    constructor(runEveryFiveTimes) {
+      this.counter = 0;
+      this.callback = runEveryFiveTimes;
+    }
+
+    increase(runIf5Times) {
+      // class에서 함수를 작성할 때는 function을 붙이지 않아도 된다.
+      this.counter++;
+      console.log(this.counter);
+      if (this.counter % 5 === 0) {
+        this.callback && this.callback(this.counter);
+      }
+    }
+  }
+
+  function printSomething(num) {
+    console.log(`'yo!' ${num}`);
+  }
+  function alertNum(num) {
+    alert(`'alert!' ${num}`);
+  }
+
+  const printCounter = new Counter(printSomething);
+  const alertCounter = new Counter(alertNum);
+  // Class를 하나의 완전체로 만들기 보단, 원하는 기능을 끼워맞추어 재조립이 가능하도록 설계하라.
 }
