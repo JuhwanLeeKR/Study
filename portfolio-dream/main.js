@@ -26,7 +26,7 @@ navbarMenu.addEventListener('click', (event) => {
 
 // Handle click on "contact me" button on home
 const contactBtn = document.querySelector('.home__contact');
-console.log(contactBtn);
+// console.log(contactBtn);
 contactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
@@ -52,6 +52,42 @@ document.addEventListener('scroll', () => {
 // Handle click on the "arrow up" button
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
+});
+
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+  console.log(filter);
+
+  projects.forEach((project) => {
+    if (filter === '*' || filter === project.dataset.type) {
+      project.classList.remove('invisible');
+    } else {
+      project.classList.add('invisible');
+    }
+  });
+
+  /*****************************
+1. forEach와 같은 값1
+for (let project of projects) {
+  console.log(project);
+}
+
+2. forEach와 같은 값2
+let project;
+for (let i = 0; i < projects.length; i++) {
+  project = projects[i];
+  console.log(project);
+}
+****************************/
+
+  console.log(filter);
 });
 
 function scrollIntoView(selector) {
