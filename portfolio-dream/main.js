@@ -63,32 +63,33 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
-  console.log(filter);
 
-  projects.forEach((project) => {
-    if (filter === '*' || filter === project.dataset.type) {
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
+  projectContainer.classList.add('anime-out');
 
-  /*****************************
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anime-out');
+  }, 300);
+});
+/*****************************
 1. forEach와 같은 값1
 for (let project of projects) {
-  console.log(project);
+console.log(project);
 }
 
 2. forEach와 같은 값2
 let project;
 for (let i = 0; i < projects.length; i++) {
-  project = projects[i];
-  console.log(project);
+project = projects[i];
+console.log(project);
 }
 ****************************/
-
-  console.log(filter);
-});
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
