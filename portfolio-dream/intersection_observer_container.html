@@ -54,6 +54,27 @@
       <div class="box">20</div>
     </div>
 
-    <script></script>
+    <script>
+      const boxes = document.querySelectorAll('.box');
+
+      const options = {
+        root: document.querySelector('.container'), // default: viewport
+        rootMargin: '0px', // default: 0px
+        threshold: 0.5, // default: 0
+      };
+      const callback = (entries, observer) => {
+        // 화면에 들어오면 class active를 추가
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active');
+          }
+        });
+      };
+      // option을 추가, 생략 가능하다
+      const observer = new IntersectionObserver(callback, options);
+      boxes.forEach((box) => observer.observe(box));
+    </script>
   </body>
 </html>
