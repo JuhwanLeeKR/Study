@@ -47,17 +47,24 @@
     <script>
       const boxes = document.querySelectorAll('.box');
 
+      const options = {
+        root: null, // default: viewport
+        // 사용자에게 현재 보여지진 않지만 근접해 있는 경우 내가 이미지를 먼저 로딩해 놓겠다.
+        rootMargin: '0px', // default: 0px, css에서 margin을 입력하는 것과 같다
+        threshold: 1, // default: 0, 0~1 (100%), 얼마만큼 보여져야 callback 함수를 호출하는가, 0.2설정 = 나갈때 0.8로 적용
+      };
       const callback = (entries, observer) => {
+        // 화면에 들어오면 class active를 추가
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(entry.target);
             entry.target.classList.add('active');
           } else {
-            console.error(entry.target);
+            entry.target.classList.remove('active');
           }
         });
       };
-      const observer = new IntersectionObserver(callback);
+      // option을 추가, 생략 가능하다
+      const observer = new IntersectionObserver(callback, options);
       boxes.forEach((box) => observer.observe(box));
     </script>
   </body>
