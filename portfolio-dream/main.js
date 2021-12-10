@@ -4,8 +4,6 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-  // console.log(window.scrollY);
-  // console.log(navbarHeight);
   if (window.scrollY > navbarHeight) {
     navbar.classList.add('navbar--dark');
   } else {
@@ -33,7 +31,6 @@ navbarToggleBtn.addEventListener('click', () => {
 
 // Handle click on "contact me" button on home
 const contactBtn = document.querySelector('.home__contact');
-// console.log(contactBtn);
 contactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
@@ -43,7 +40,6 @@ const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
-  // console.log(1 - window.scrollY / homeHeight);
 });
 
 // Show "arrow up" button when scrolling down
@@ -145,7 +141,6 @@ const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting && entry.intersectionRatio > 0) {
       const index = sectionIds.indexOf(`#${entry.target.id}`);
-      //console.log(index, entry.target.id);
 
       // 스크롤링이 아래로 되어서 페이지가 올라옴
       if (entry.boundingClientRect.y < 0) {
