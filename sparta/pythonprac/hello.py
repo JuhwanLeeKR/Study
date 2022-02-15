@@ -25,4 +25,4 @@ for movie in movies:
       'rank':rank,
       'star':star
     }
-    db.movies.insert_one(doc)
+    db.moviesNaver.insert_one(doc)
