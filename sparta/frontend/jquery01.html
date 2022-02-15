@@ -13,30 +13,50 @@
       }
     </style>
 
-    <script>
+    <script defer>
       function q1() {
-        // 1. input-q1의 입력값을 가져온다. $('# .... ').val() 이렇게!
-        // 2. 만약 입력값이 빈칸이면 if(입력값=='')
-        // 3. alert('입력하세요!') 띄우기
-        // 4. alert(입력값) 띄우기
+        const inputQ1 = document.querySelector('#input-q1');
+        if (inputQ1.value == false) {
+          alert('입력하세요!');
+        } else {
+          alert(inputQ1.value);
+          inputQ1.value = '';
+        }
       }
 
       function q2() {
-        // 1. input-q2 값을 가져온다.
-        // 2. 만약 가져온 값에 @가 있으면 (includes 이용하기 - 구글링!)
-        // 3. info@gmail.com -> gmail 만 추출해서 ( .split('@') 을 이용하자!)
-        // 4. alert(도메인 값);으로 띄우기
-        // 5. 만약 이메일이 아니면 '이메일이 아닙니다.' 라는 얼럿 띄우기
+        const inputQ2 = document.querySelector('#input-q2');
+        if (inputQ2.value.includes('@') == true) {
+          alert(inputQ2.value.split('@')[1].split('.')[0]);
+        } else {
+          alert('이메일이 아닙니다.');
+        }
+        inputQ2.value = '';
       }
 
       function q3() {
-        // 1. input-q3 값을 가져온다. let txt = ... q1, q2에서 했던 걸 참고!
-        // 2. 가져온 값을 이용해 names-q3에 붙일 태그를 만든다. (let temp_html = `<li>${txt}</li>`) 요렇게!
-        // 3. 만들어둔 temp_html을 names-q3에 붙인다.(jQuery의 $('...').append(temp_html)을 이용하면 굿!)
+        const inputQ3 = document.querySelector('#input-q3');
+        // li element 생성
+        const li = document.createElement('li');
+        // li에 text node 추가
+        const textNode = document.createTextNode(inputQ3.value);
+        li.appendChild(textNode);
+
+        if (inputQ3.value == false) {
+          alert('입력해주세요');
+        } else {
+          document.querySelector('#names-q3').append(li);
+        }
+        inputQ3.value = '';
       }
 
       function q3_remove() {
-        // 1. names-q3의 내부 태그를 모두 비운다.(jQuery의 $('....').empty()를 이용하면 굿!)
+        let namesQ3 = document.querySelector('#names-q3');
+        let content = document.querySelectorAll('#names-q3 > li');
+
+        for (i = 0; i < content.length; i++) {
+          namesQ3.removeChild(content[i]);
+        }
       }
     </script>
   </head>
@@ -51,7 +71,8 @@
         [완성본]1-2. 버튼을 눌렀을 때 칸에 아무것도 없으면 "입력하세요!" 얼럿
         띄우기
       </h5>
-      <input id="input-q1" type="text" /> <button onclick="q1()">클릭</button>
+      <input id="input-q1" type="text" />
+      <button onclick="q1()">클릭</button>
     </div>
     <hr />
     <div class="question-box">
@@ -71,10 +92,7 @@
       <input id="input-q3" type="text" placeholder="여기에 이름을 입력" />
       <button onclick="q3()">이름 붙이기</button>
       <button onclick="q3_remove()">다지우기</button>
-      <ul id="names-q3">
-        <li>세종대왕</li>
-        <li>임꺽정</li>
-      </ul>
+      <ul id="names-q3"></ul>
     </div>
   </body>
 </html>
