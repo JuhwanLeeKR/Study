@@ -21,10 +21,48 @@
         padding: 10px;
         border: 1px solid;
       }
+      .red {
+        color: #f00;
+        border: 1px solid #000;
+      }
     </style>
 
     <script>
-      function q1() {}
+      function q1() {
+        $('#names-q1').empty();
+        $.ajax({
+          type: 'GET',
+          url: 'http://spartacodingclub.shop/sparta_api/seoulbike',
+          data: {},
+          success: function (response) {
+            let rows = response['getStationList']['row'];
+
+            for (let i = 0; i < rows.length; i++) {
+              let name = rows[i]['stationName'];
+              let rack = rows[i]['rackTotCnt'];
+              let bike = rows[i]['parkingBikeTotCnt'];
+
+              let temp_html = ``;
+
+              if (bike < 5) {
+                temp_html = `<tr>
+                              <td class="red">${name}</td>
+                              <td class="red">${rack}</td>
+                              <td class="red">${bike}</td>
+                            </tr>`;
+              } else {
+                temp_html = `<tr>
+                                <td>${name}</td>
+                                <td>${rack}</td>
+                                <td>${bike}</td>
+                              </tr>`;
+              }
+
+              $('#names-q1').append(temp_html);
+            }
+          },
+        });
+      }
     </script>
   </head>
 
@@ -46,23 +84,7 @@
             <td>현재 거치된 따릉이 수</td>
           </tr>
         </thead>
-        <tbody id="names-q1">
-          <tr>
-            <td>102. 망원역 1번출구 앞</td>
-            <td>22</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>103. 망원역 2번출구 앞</td>
-            <td>16</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>104. 합정역 1번출구 앞</td>
-            <td>16</td>
-            <td>0</td>
-          </tr>
-        </tbody>
+        <tbody id="names-q1"></tbody>
       </table>
     </div>
   </body>
