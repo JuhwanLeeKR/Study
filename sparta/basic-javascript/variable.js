@@ -1,5 +1,4 @@
-const name = 'Juhwan Lee';
-console.log(name);
+let isMan = true;
+let isWoman = false;
 
-name = 'Carlos';
-console.log(name);
+console.log(isMan, isWoman);
