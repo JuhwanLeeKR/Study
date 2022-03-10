@@ -11,14 +11,17 @@ def main():
     return render_template("index.html", name=myname)
 
 # url에 '<>'을 사용하여 변수를 전달할 수 있다.
+
+
 @app.route('/detail/<keyword>')
 def detail(keyword):
-    r = requests.get('http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99')
-    response = r.json()
-    rows = response['RealtimeCityAir']['row']
+    r = requests.get("fhttps://owlbot.info/api/v4/dictionary/{keyword}", headers={
+                     "Authorization": "Token a37cc06a6d40cc42c2f20874deea1e17f6f8cc6b"})
+    result = r.json()
+    print(result)
     word_receive = request.args.get('word_give')
     print(word_receive)
-    return render_template("detail.html", rows=rows, word=keyword)
+    return render_template("detail.html", word=keyword)
 
 
 if __name__ == '__main__':
