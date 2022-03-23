@@ -1,23 +1,19 @@
+// ES6 문법 활용
 class Human {
-  constructor() {
-    this.gender = 'male';
-  }
+  gender = 'male';
 
-  printGender() {
+  printGender = () => {
     console.log(this.gender);
-  }
+  };
 }
 
 class Person extends Human {
-  constructor() {
-    super(); // 파생 class에는 super()가 필요하다.
-    this.name = 'Max';
-    this.gender = 'female';
-  }
+  name = 'Max';
+  gender = 'female';
 
-  printMyName() {
+  printMyName = () => {
     console.log(this.name);
-  }
+  };
 }
 
 const person = new Person();
