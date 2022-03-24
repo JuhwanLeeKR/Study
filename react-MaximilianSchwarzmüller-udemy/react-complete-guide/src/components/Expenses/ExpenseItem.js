@@ -6,6 +6,8 @@ import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);
+  // onsole.log('ExpenseItem evaluated by React');
+  // props가 호출되는 방식에 유의하자
 
   const clickHandler = () => {
     setTitle('Updated!');
