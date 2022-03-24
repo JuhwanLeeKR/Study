@@ -1,6 +1,6 @@
 import Expenses from './components/Expenses/Expenses';
 
-function App() {
+const App = () => {
   const expenses = [
     {
       id: 'e1',
@@ -34,6 +34,6 @@ function App() {
       {/* <p>This is also visible!</p>  //react방식 */}
     </div>
   );
-}
+};
 
 export default App;
