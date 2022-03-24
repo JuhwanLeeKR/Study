@@ -1,16 +1,17 @@
 import ExpenseDate from './ExpenseDate';
+import Card from './Card';
 import './ExpenseItem.css';
 
 function ExpenseItem(props) {
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate date={props.date} />
       {/* 콘텐츠가 없는 컴포넌트가 있다면 스스로 닫아줘야한다 -> app.js도 마찬가지 */}
       <div className="expense-item__description">
         <h2>{props.title}</h2>
         <div className="expense-item__price">${[props.amount]}</div>
       </div>
-    </div>
+    </Card>
     // HTML처럼 보이기는 하지만 리액트가 만든 특별한 JSX 구문이다.
   );
 }
