@@ -3,20 +3,37 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-  const [enteredTitle, setEnteredTitle] = useState('');
-  const [enteredAmount, setEnteredAmount] = useState('');
-  const [enteredDate, setEneteredDate] = useState('');
+  // const [enteredTitle, setEnteredTitle] = useState('');
+  // const [enteredAmount, setEnteredAmount] = useState('');
+  // const [enteredDate, setEneteredDate] = useState('');
+  const [userInput, setUserInput] = useState({
+    enteredTitle: '',
+    enteredAmount: '',
+    enteredDate: '',
+  });
 
   const titleChangeHandler = (event) => {
-    setEnteredTitle(event.target.value); // 이 값을 사용하려고 저장한다
+    // setEnteredTitle(event.target.value); // 이 값을 사용하려고 저장한다
+    setUserInput({
+      ...userInput,
+      enteredTitle: event.target.value,
+    });
   };
 
   const amountChangeHandler = (event) => {
-    setEnteredAmount(event.target.value);
+    // setEnteredAmount(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredAmount: event.target.value,
+    });
   };
 
   const dateChangeHandler = (event) => {
-    setEneteredDate(event.target.value);
+    // setEneteredDate(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredDate: event.target.value,
+    });
   };
 
   return (
