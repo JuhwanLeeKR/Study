@@ -30,9 +30,14 @@ const App = () => {
   // para.textContext = 'This is also visible';
   // document.getElementById('root').append(para);
 
+  const addExpenseHandler = (expense) => {
+    console.log('In App.js');
+    console.log(expenses);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
       {/* <p>This is also visible!</p>  //react방식 */}
     </div>
@@ -40,3 +45,5 @@ const App = () => {
 };
 
 export default App;
+
+// 이코테 해쉬 스택 큐 정렬 완전탐색 bfs dfs greedy
