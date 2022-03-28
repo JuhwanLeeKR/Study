@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+//, { useState }
 
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
-  const [title, setTitle] = useState(props.title);
-  // onsole.log('ExpenseItem evaluated by React');
-  // props가 호출되는 방식에 유의하자
+  // const [title, setTitle] = useState(props.title);
+  // // onsole.log('ExpenseItem evaluated by React');
+  // // props가 호출되는 방식에 유의하자
 
-  const clickHandler = () => {
-    setTitle('Updated!');
-    console.log(title);
-  };
+  // const clickHandler = () => {
+  //   setTitle('Updated!');
+  //   console.log(title);
+  // };
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -21,7 +22,7 @@ const ExpenseItem = (props) => {
         <h2>{props.title}</h2>
         <div className="expense-item__price">${[props.amount]}</div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
+      {/* <button onClick={clickHandler}>Change Title</button> */}
     </Card>
     // HTML처럼 보이기는 하지만 리액트가 만든 특별한 JSX 구문이다.
   );
