@@ -18,7 +18,7 @@ const ExpenseItem = (props) => {
       <ExpenseDate date={props.date} />
       {/* 콘텐츠가 없는 컴포넌트가 있다면 스스로 닫아줘야한다 -> app.js도 마찬가지 */}
       <div className="expense-item__description">
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <div className="expense-item__price">${[props.amount]}</div>
       </div>
       <button onClick={clickHandler}>Change Title</button>
