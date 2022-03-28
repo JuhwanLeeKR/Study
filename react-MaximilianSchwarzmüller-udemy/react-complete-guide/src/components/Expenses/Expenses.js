@@ -12,6 +12,10 @@ function Expenses(props) {
     setFilteredYear(selectedYear);
   };
 
+  const filteredExpense = props.items.filter((expense) => {
+    return expense.date.getFullYear().toString() === filteredYear;
+  });
+
   return (
     <div>
       <Card className="expenses">
@@ -19,7 +23,7 @@ function Expenses(props) {
           selected={filteredYear}
           onChangeFilter={filterChangehandler}
         />
-        {props.items.map((expense) => (
+        {filteredExpense.map((expense) => (
           <ExpenseItem
             key={expense.id} // index를 받을 수 있지만 권장되진 않는다(버그 위험)
             title={expense.title}
