@@ -33,3 +33,12 @@ React allows you to create re-usable and reactive components
 - Rendering Lists & Conditional Content
 - Working With Really Dynamic Content
 */
+
+// 😺 Section6.React Component Styling😺
+/* 
+- Styling Componeets
+=> Make Your Apps Look Good
+- Conditional & Dynamic Styles
+- Styled Componets
+- CSS Modules
+*/
