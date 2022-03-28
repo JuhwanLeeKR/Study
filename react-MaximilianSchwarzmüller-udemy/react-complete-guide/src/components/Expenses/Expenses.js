@@ -21,6 +21,7 @@ function Expenses(props) {
         />
         {props.items.map((expense) => (
           <ExpenseItem
+            key={expense.id} // index를 받을 수 있지만 권장되진 않는다(버그 위험)
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
